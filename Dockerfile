@@ -36,6 +36,8 @@ RUN chmod u+x /postfix.sh /entrypoint.sh
 
 VOLUME  ["/etc/icinga", "/var/cache/icinga", "/etc/postfix", "/var/log"]
 
+EXPOSE 80
+
 # Initialize and run Supervisor
 ENTRYPOINT ["/entrypoint.sh"]
 CMD ["/usr/bin/supervisord"]
